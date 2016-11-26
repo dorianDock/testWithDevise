@@ -1,4 +1,53 @@
 @import "bootstrap-sprockets";
+$nav-pills-active-link-hover-bg: #4ECDC4;
+$nav-link-hover-bg: #C7F464;
+
 @import "bootstrap";
 
 @import "*";
+
+.top5 {
+  margin-top: 5px;
+}
+.top10 {
+  margin-top: 10px;
+}
+.top15 {
+  margin-top: 15px;
+}
+.top20 {
+  margin-top: 20px;
+}
+
+.bottom5 {
+  margin-bottom: 5px;
+}
+.bottom10 {
+  margin-bottom: 10px;
+}
+.bottom15 {
+  margin-bottom: 15px;
+}
+.bottom20 {
+  margin-bottom: 20px;
+}
+
+.nav-pills-centered {
+  display: inline-block;
+}
+
+body {
+  background: #556270;
+}
+
+h1 {
+  color: #C7F464;
+}
+
+.block {
+  background: #fff;
+}
+
+.home_photo {
+  max-height: 200px;
+}
