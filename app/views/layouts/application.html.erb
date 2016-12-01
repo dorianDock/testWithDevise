@@ -27,8 +27,37 @@
           <%= link_to 'Photos', photos_path %>
         <% end %>
 
+        <% if current_user %>
+          <%= content_tag :li, role: 'presentation' do %>
+              <%= link_to 'Sign Out', destroy_user_session_path, data: {method: :delete} %>
+                <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
+          <% end %>
+
+        <% else %>
+            <%= content_tag :li, role: 'presentation' do %>
+                <%= link_to 'Sign In', new_user_session_path %>
+            <% end %>
+        <% end %>
+
+
 
       </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-6 col-xs-offset-3">
+      <% if flash[:notice] %>
+          <div class="alert alert-info" role="alert">
+            <%= flash[:notice] %>
+          </div>
+      <% end %>
+
+      <% if flash[:alert] %>
+          <div class="alert alert-danger" role="alert">
+            <%= flash[:alert] %>
+          </div>
+      <% end %>
+
     </div>
   </div>
 
